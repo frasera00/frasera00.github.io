@@ -1,31 +1,28 @@
----
-layout: compress
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+</head>
+<body>
+  <header>
+    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+    <nav>
+      <a href="{{ '/' | relative_url }}">Home</a> |
+      <a href="{{ '/about' | relative_url }}">About</a> |
+      <a href="{{ '/cv' | relative_url }}">CV</a> |
+      <a href="{{ '/publications' | relative_url }}">Publications</a>
+    </nav>
+    <hr>
+  </header>
 
-{% include base_path %}
-
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
-
-  <body>
-
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
-
+  <main>
     {{ content }}
+  </main>
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
-    {% include scripts.html %}
-
-  </body>
+  <footer>
+    <hr>
+    <p>© {{ site.title }} — built with Jekyll</p>
+  </footer>
+</body>
 </html>
