@@ -12,6 +12,8 @@ teaching: false
 slidesurl: ""
 ---
 
+![Calibrated seismic QC prediction overlay](seismic-qc-overlay.png)
+
 This project implements a controlled benchmark for seismic trace-level quality control on synthetic CMP-style gathers with hyperbolic moveout events. An Isolation Forest is trained exclusively on normal traces, with synthetic injected anomalies used only for calibration and held-out evaluation.
 
 Key aspects:
